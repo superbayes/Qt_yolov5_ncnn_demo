@@ -5,9 +5,10 @@
 * opencv 4.5.2
 * yolov5s(yolov5r6)
 * c++
-* 4K video source
+* video frame size:1280*640
 # result 
 ![result video](https://github.com/superbayes/Qt_yolov5_ncnn_demo/blob/main/Qt_yolov5_ncnn_demo/yolov5s_dancing.gif)
 # note
 
+* yolov5s 的预测速度不尽如意,后续有空在优化.
 
