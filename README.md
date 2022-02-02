@@ -7,6 +7,7 @@
 * c++
 * 4K video source
 # result 
+![result video](https://github.com/superbayes/Qt_yolov5_ncnn_demo/blob/main/Qt_yolov5_ncnn_demo/yolov5s_dancing.gif)
 # note
 
 
