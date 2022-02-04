@@ -19,13 +19,11 @@ SOURCES += \
     YoloV5.cpp \
     main.cpp \
     mainwindow.cpp \
-    mythread.cpp \
     myutils.cpp
 
 HEADERS += \
     YoloV5.h \
     mainwindow.h \
-    mythread.h \
     myutils.h
 
 FORMS += \

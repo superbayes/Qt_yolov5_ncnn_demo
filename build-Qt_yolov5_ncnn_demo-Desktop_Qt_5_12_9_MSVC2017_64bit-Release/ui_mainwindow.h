@@ -11,9 +11,9 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QOpenGLWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
@@ -25,7 +25,8 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QPushButton *pb_opencam;
-    QOpenGLWidget *ogl_cam;
+    QLabel *ogl_cam;
+    QPushButton *pb_close;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -33,15 +34,19 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(1006, 841);
+        MainWindow->resize(1006, 835);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         pb_opencam = new QPushButton(centralwidget);
         pb_opencam->setObjectName(QString::fromUtf8("pb_opencam"));
-        pb_opencam->setGeometry(QRect(10, 720, 101, 31));
-        ogl_cam = new QOpenGLWidget(centralwidget);
+        pb_opencam->setGeometry(QRect(10, 740, 101, 31));
+        ogl_cam = new QLabel(centralwidget);
         ogl_cam->setObjectName(QString::fromUtf8("ogl_cam"));
-        ogl_cam->setGeometry(QRect(0, 0, 960, 720));
+        ogl_cam->setGeometry(QRect(10, 10, 960, 720));
+        ogl_cam->setStyleSheet(QString::fromUtf8("background-color: rgb(0, 0, 0);"));
+        pb_close = new QPushButton(centralwidget);
+        pb_close->setObjectName(QString::fromUtf8("pb_close"));
+        pb_close->setGeometry(QRect(120, 740, 101, 31));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -60,6 +65,8 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         pb_opencam->setText(QApplication::translate("MainWindow", "\346\211\223\345\274\200\350\247\206\351\242\221", nullptr));
+        ogl_cam->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
+        pb_close->setText(QApplication::translate("MainWindow", "\345\205\263\351\227\255", nullptr));
     } // retranslateUi
 
 };

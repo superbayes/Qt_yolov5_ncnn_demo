@@ -2,13 +2,14 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QThread>
-#include "mythread.h"
+//#include <QThread>
+//#include "mythread.h"
 #include <QImage>
 #include <QDebug>
-#include "opencv2/opencv.hpp"
+#include <QTimer>
+//#include "opencv2/opencv.hpp"
 #include "YoloV5.h"
-#include <QPainter>
+//#include <QPainter>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -20,25 +21,14 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    QThread *thread_camera;
-    MyTHread* MyCamera;
     cv::Mat frame;
-    cv::Mat frame_3D;
     QImage frame2QImage;
-    QImage frame2QImage_3D;
-    //NanoDetPLUS1* detector;
     YoloV5* detector;
     cv::VideoCapture Capture;
     bool flag_closeOpencvVideoCaptureThread=false;
-public:
-    void paintEvent(QPaintEvent *e);
-
-signals:
-    void signal_openIR(int deviceid);
-    void signal_openCAM(std::string videoFileName);
-
+    QTimer* m_timer;
 private slots:
-
+    void on_pb_close_clicked();
 
 private:
     Ui::MainWindow *ui;
