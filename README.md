@@ -5,6 +5,9 @@
 * opencv 4.5.2
 * yolov5s(yolov5r6)
 * c++
+* Vulkan ncnn
+* opencv
+* Vulkan 1.2.198.1
 * video frame size:1280*640
 # result 
 ![result video](https://github.com/superbayes/Qt_yolov5_ncnn_demo/blob/main/Qt_yolov5_ncnn_demo/yolov5s_dancing.gif)
