@@ -5,8 +5,7 @@
 * opencv 4.5.2
 * yolov5s(yolov5r6)
 * c++
-* Vulkan ncnn
-* opencv
+* ncnn
 * Vulkan 1.2.198.1
 * video frame size:1280*640
 # result 
